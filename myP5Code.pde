@@ -4,6 +4,7 @@ setup = function() {
    textSize (70);
    
    
+   
    //sun
    text("🌞", 490, 80);
    
@@ -24,7 +25,6 @@ setup = function() {
    }
    
    
-   
    //wind 
    
    var windX = [150, 230, 370, 450];
@@ -34,8 +34,7 @@ setup = function() {
    for (var i = 0; i <windX.length; i++){
      text("ᯓ", windX[i], windY[i]);
    }
-   
-   
+
    
    // wildflowers
    
@@ -51,26 +50,22 @@ setup = function() {
    }
    
    
-   
    //ground
    
    fill(34,139,34);
    rect(-10, 300, 610, 150);
    
-   
-   
-   //dandelions 
-   
+      
+  
    
   }
   
+  //dandelions 
+  
   var xPositions = [300]
-   var yPositions = [300]
+  var yPositions = [300]
    
   draw = function (){
-   
-
-   
    if(mousePressed){
    xPositions.push(mouseX); 
    yPositions.push(mouseY);
@@ -80,11 +75,19 @@ setup = function() {
      text ("𖤣", xPositions[d], yPositions[d]);
    }
    
-   
+
+   drawBee (250, 290);
+   drawBee (300, 190);
    
    
 
 }
 
-
+//drawBee function
+   
+   var drawBee = function (beeX, beeY){
+   textSize(20); 
+   text("🐝", beeX, beeY);
+   }
+   
 
